@@ -1,5 +1,5 @@
 .catalog {
-    padding: 80px 0;
+    padding: 80px 0 0 0;
     .title {
         font-weight: 400;
         font-size: 30px;
@@ -43,9 +43,12 @@
     }
     &__content {
         margin-top: 57px;
-        display: flex;
+        display: none;
         flex-wrap: wrap;
         justify-content: space-between;
+        &_active {
+            display: flex;
+        }
     }
        
     &-item {
@@ -126,6 +129,7 @@
             border: none;
             border-radius: 5px;
             margin-top: 17px;
+            cursor: pointer;
         }
         &__wrapper {
             display: flex;
@@ -175,7 +179,6 @@
                     left: -14px;
                 }
             }
-            
             
         }
         &__back {

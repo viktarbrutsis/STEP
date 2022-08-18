@@ -8,17 +8,20 @@
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 500;
+    cursor: pointer;
     &_promo {
         margin-top: 65px;
         width: 300px;
         height: 50px;
         font-size: 16px;
         line-height: 25px;
+        cursor: pointer;
     }
     &_consult {
         width: 303px;
         height: 58px;
         font-size: 16px;
         line-height: 25px;
+        cursor: pointer;
     }
 }
