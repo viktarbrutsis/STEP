@@ -64,5 +64,10 @@ $(document).ready(function(){
         $('.overlay, #buy').fadeIn();
       });
     });
+
+    $('.consult__form').validate();
+    $('#consult form').validate();
+    $('#buy form').validate();
+   
   });
 

@@ -77,8 +77,8 @@
         <div class="container">
             <h2>Получите бесплатную консультацию<br>по подбору пульсометра</h2>
             <h4>Просто заполните форму заявки<br>и мы перезвоним вам в течении 10 минут</h4>
-            <form class="consult__form">
-                <input name="name" placeholder="Ваше имя" type="text">
+            <form id="consult-main" class="consult__form">
+                <input name="name"  placeholder="Ваше имя" type="text">
                 <input name="phone" placeholder="Ваш телефон" type="tel">
                 <input name="email" placeholder="Ваш E-mail" type="email">
                 <button class="button button_consult">заказать кОНСУЛЬТАЦИЮ</button>
@@ -405,7 +405,7 @@
             <div class="modal-title">Просто заполните форму заявки</div>
             <div class="modal-subtitle">и мы перезвоним вам в течении 10 минут</div>
             <form class="consult__form consult__form_modal">
-                <input name="name" placeholder="Ваше имя" type="text">
+                <input name="name" required maxlength="3" placeholder="Ваше имя" type="text">
                 <input name="phone" placeholder="Ваш телефон" type="tel">
                 <input name="email" placeholder="Ваш E-mail" type="email">
                 <button class="button button_consult">заказать кОНСУЛЬТАЦИЮ</button>
@@ -433,6 +433,7 @@
     <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
     <script type="text/javascript" src="js/jquery-migrate-1.2.1.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
     <script src="js/script.js"></script>
     
 </body>
