@@ -64,10 +64,56 @@ $(document).ready(function(){
         $('.overlay, #buy').fadeIn();
       });
     });
-
-    $('.consult__form').validate();
-    $('#consult form').validate();
-    $('#buy form').validate();
    
+    function validForm(item) {
+      $(item).validate({
+        rules: {
+          name: {
+            required: true,
+            minlength: 2
+          },
+          phone: "required",
+          email: {
+            required: true,
+            email: true
+          }
+        },
+        messages: {
+          name: {
+            required: "Введите ваше имя",
+            minlength: "Введите минимум 2 символа"
+          },
+          phone: "Введите ваш номер телефона",
+          email: {
+            required: "Введите вашу почту",
+            email: "Ваша почта введена неверно"
+  
+          }
+        }
+      });
+    }
+
+    validForm('#buy form');
+    validForm('#consult form');
+    validForm('.consult__form');
+  
+    $('input[name=phone]').mask("+375 (99) 999-99-99");
+
+    $('form').submit(function(e) {
+      e.preventDefault();
+      $.ajax({
+          type: "POST",
+          url: "mailer/smart.php",
+          data: $(this).serialize()
+      }).done(function() {
+          $(this).find("input").val("");
+          $('#consult, #buy').fadeOut();
+          $('.overlay, #thanks').fadeIn('slow');
+
+          $('form').trigger('reset');
+      });
+      return false;
+  });
+
   });
 
